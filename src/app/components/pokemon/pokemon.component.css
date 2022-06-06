@@ -1,0 +1,97 @@
+html,
+body {
+  width: 100%;
+  color: #fff;
+  background-color: #424242;
+}
+
+main {
+  color: #fff;
+  background-color: #424242;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.min-width {
+  width: 100%;
+  min-width: 900px;
+  max-width: 1000px;
+}
+
+h1 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 28px !important;
+  font-weight: bold;
+  text-align: center !important;
+}
+
+button {
+  margin-right: 20px;
+  float: right;
+}
+
+.content {
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+img:hover {
+  box-shadow: 2px 2px 5px #fff;
+}
+
+li {
+  padding-bottom: 10px;
+  font-size: 16px !important;
+  list-style-type: none;
+  text-align: left;
+}
+
+.title {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.italic {
+  font-size: 15px !important;
+  font-style: italic;
+}
+  
+.url {
+  font-style: italic;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.url:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: block;
+  padding-bottom: 75px;
+}
+
+.accordion .mat-expansion-panel-header-title,
+.accordion .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.accordion .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}

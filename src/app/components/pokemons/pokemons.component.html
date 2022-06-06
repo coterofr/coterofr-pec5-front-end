@@ -1,0 +1,42 @@
+<h1>List all pokemons</h1>
+
+<div class="center">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+</div>
+
+<div *ngIf="!loading" class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid" [@cardsAnimation]="pokemons.length">
+        <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let pokemon of pokemons">
+            <mat-card class="mat-elevation-z4 card" (click)="viewPokemon(pokemon.id)">
+                <mat-card-header>
+                    <div mat-card-avatar class="header-image"></div>
+                    <mat-card-title>{{ pokemon.name }}</mat-card-title>
+                    <mat-card-subtitle>Identifier: {{ pokemon.id }}</mat-card-subtitle>
+                    <mat-card-subtitle>Type: <span class="title">{{ pokemon.type }}</span></mat-card-subtitle>
+                </mat-card-header>
+
+                <img mat-card-image src="{{ pokemon.image_url }}" alt="Image">
+
+                <mat-card-content>
+                    <ul>
+                        <li>
+                            <span class="title">Height</span>: {{ pokemon.height }}
+                        </li>
+                        <li>
+                            <span class="title">Weight</span>: {{ pokemon.weight }}
+                        </li>
+                        <li>
+                            <span class="title">Move</span>: {{ pokemon.move }}
+                        </li>
+                    </ul>
+                    <ul>
+                        <span class="title">Abilities</span>:
+                        <li *ngFor="let ability of pokemon.abilities">
+                            <span>{{ ability }}</span>
+                        </li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
